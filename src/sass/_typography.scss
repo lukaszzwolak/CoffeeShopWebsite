@@ -1,0 +1,25 @@
+/* src/sass/_typography.scss */
+
+@use 'variables' as *;
+
+body {
+    font-family: $fontFamily;
+    font-weight: $fontWeightRegular;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: $fontWeightBold;
+}
+
+h2 {
+    font-weight: $fontWeightSemibold;
+}
+
+.italic {
+    font-style: italic;
+}

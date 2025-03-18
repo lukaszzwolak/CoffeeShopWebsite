@@ -1,0 +1,115 @@
+/* src/sass/pages/_homepage.scss */
+
+@use "../variables" as *;
+
+/* Połączenie nawigacji i hero */
+.hero {
+  background: url("../../images/background.png") center/cover no-repeat;
+  position: relative;
+  height: 75vh;
+  /* Trochę zmniejszona wysokość */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Overlay dla lepszej widoczności tekstu */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Nawigacja - teraz część Hero */
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 10px 30px;
+  max-width: 1200px;
+  /* Ograniczenie szerokości */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+/* Stylizacja logo i linków */
+.logo-text {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: $primaryColor;
+}
+
+/* Styl tytułu w Hero */
+.hero-title {
+  position: relative;
+  font-size: 2.5rem;
+  color: $primaryColor;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+/* Przycisk Discover */
+.btn-arrow {
+  position: relative;
+  display: inline-block;
+  background: none;
+  border: 2px solid $primaryColor;
+  color: $primaryColor;
+  padding: 8px 16px;
+  margin-top: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-arrow:hover {
+  background: $primaryColor;
+  color: black;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .btn-arrow {
+    font-size: 1rem;
+    padding: 6px 12px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

@@ -1,0 +1,46 @@
+/* src/sass/_layout.scss */
+
+@use 'variables' as *;
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $spacing-base;
+}
+
+.header {
+    background-color: $primaryColor;
+    color: $whiteColor;
+    text-align: center;
+    padding: $spacing-base;
+}
+
+.footer {
+    background-color: $primaryColor;
+    color: $whiteColor;
+    text-align: center;
+    padding: $spacing-base;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: $spacing-base;
+}
+
+.left,
+.right {
+    width: 48%;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+}

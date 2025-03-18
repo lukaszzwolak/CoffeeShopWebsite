@@ -1,0 +1,26 @@
+/* src/sass/_global.scss */
+
+@use 'variables' as *;
+
+body {
+    font-family: $fontFamily;
+    background-color: $whiteColor;
+    color: $blackColor;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $fontFamily;
+    font-weight: $fontWeightBold;
+    color: $primaryColor;
+}
+
+p {
+    font-family: $fontFamily;
+    font-weight: $fontWeightRegular;
+    line-height: 1.6;
+}
