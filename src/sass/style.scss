@@ -1,24 +1,27 @@
 /* src/sass/style.scss */
 
-@use 'variables' as *; // Ładuje zmienne z variables.scss
+// variables
+@use 'variables' as *;
+
+// common styles
+
 @use 'normalize';
-@use 'bootstrap';
-@use 'global';
 @use 'layout';
+@use 'global';
 @use 'typography';
 
-/* page imports */
+// pages
 @use 'pages/homepage';
 @use 'pages/productsPage';
 @use 'pages/contactPage';
 @use 'pages/about';
+@use 'pages/footer';
 
-/* Ustawienie maksymalnej szerokości i marginesów dla całej strony */
 .container {
-    max-width: 1200px;
-    /* Ograniczamy szerokość strony */
-    margin: 0 auto;
-    /* Wyśrodkowanie */
-    padding: 0 20px;
-    /* Marginesy boczne */
+  max-width: 1200px;
+  /* Ograniczamy szerokość strony */
+  margin: 0 auto;
+  /* Wyśrodkowanie */
+  padding: 0 20px;
+  /* Marginesy boczne */
 }
