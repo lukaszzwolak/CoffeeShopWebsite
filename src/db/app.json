@@ -1,1 +1,32 @@
-{} 
+{
+    "products": [
+        {
+            "id": 1,
+            "title": "La Lagartija",
+            "description": "Mysterious and treacherous... A perfect start to your journey.",
+            "image": "coffee-1.png",
+            "roasting": 5,
+            "intensity": 6
+        },
+        {
+            "id": 2,
+            "title": "El Tigre",
+            "description": "A dark coffee with hints of grapefruit and caramelized peanuts.",
+            "image": "coffee-2.png",
+            "roasting": 8,
+            "intensity": 9
+        },
+        {
+            "id": 3,
+            "title": "La Cucaracha",
+            "description": "Sweet with notes of caramel, orange, and strawberry.",
+            "image": "coffee-3.png",
+            "roasting": 3,
+            "intensity": 7
+        }
+    ],
+    "about": {
+        "description": "Who are we? Just a bunch of friends with a love for a good coffee and a desire to create something new, something original.",
+        "cta": "Join us!"
+    }
+}
