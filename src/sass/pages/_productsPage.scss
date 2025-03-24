@@ -1,51 +1,111 @@
 /* src/sass/pages/_productsPage.scss */
 
+@use "../variables" as *;
+
 .products {
-  padding: 50px 0;
+  padding: 60px 0;
+  background-color: #fff;
   text-align: center;
+
+  h2.section-title {
+    font-size: 32px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: $primaryColor;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 2px;
+      background: $primaryColor;
+      margin: 20px auto 0;
+    }
+  }
 }
 
 .products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  /* Lepsze dopasowanie */
-  gap: 15px;
-  margin: 20px auto;
-  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .product-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  padding: 15px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
 
-.product-card:hover {
-  transform: translateY(-5px);
-}
+  .product-img {
+    width: 50%;
+    max-width: 400px;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
 
-.product-name {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: #333;
-}
+  .product-info {
+    width: 50%;
+    text-align: left;
 
-.product-price {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-  font-size: 0.95rem;
-  color: #BEA67C;
+    .product-name {
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #000;
+      margin-bottom: 10px;
+    }
+
+    .product-desc {
+      font-size: 15px;
+      color: #444;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    .product-rating {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+
+      span {
+        color: $primaryColor;
+        font-weight: bold;
+      }
+    }
+
+    .product-label {
+      margin-top: 10px;
+      display: inline-block;
+      background-color: $primaryColor;
+      color: #fff;
+      padding: 4px 10px;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 3px;
+    }
+  }
 }
 
 @media (max-width: 768px) {
-  .products-grid {
-    grid-template-columns: 1fr;
-  }
-
   .product-card {
-    padding: 10px;
+    flex-direction: column;
+
+    .product-img,
+    .product-info {
+      width: 100%;
+      text-align: center;
+    }
+
+    .product-info {
+      .product-rating {
+        text-align: center;
+      }
+    }
   }
 }

@@ -10,13 +10,13 @@
 </head>
 
 <body>
-    <!-- Strona Główna -->
+    <!-- HERO SECTION -->
     <section class="page hero" id="home">
         <header class="header">
             <div class="navbar">
                 <div class="logo">
                     <span class="logo-text">
-                        EL TIGRE<br><small>Venezuela Coffee Beans</small>
+                        EL TIGRE<br><small>VENEZUELA COFFEE BEANS</small>
                     </span>
                 </div>
                 <nav class="nav">
@@ -29,25 +29,76 @@
             </div>
         </header>
 
-        <div class="overlay"></div>
         <div class="hero-content">
-            <h1 class="hero-title">HOME OF ORIGINAL TASTES</h1>
-            <a href="#products" class="btn-arrow">
-                <i class="fas fa-arrow-alt-circle-down"></i>
-                DISCOVER
-            </a>
+            <h1 class="hero-title">HOME OF<br>ORIGINAL TASTES</h1>
+            <hr class="hero-divider">
+            <a href="#products" class="btn-arrow">DISCOVER <i class="fas fa-arrow-down"></i></a>
         </div>
     </section>
 
-    <!-- Produkty -->
-    <section class="page products" id="products">
-        <div class="container">
-            <h2 class="section-title">PRODUCTS</h2>
-            <div class="products-grid" id="product-list"></div>
+    <!-- PRODUCTS SECTION -->
+    <section class="products-section">
+        <h2>Products</h2>
+        <div class="product">
+            <div class="product-image">
+                <img src="images/coffee-1.png" alt="Coffee product 1">
+                <span class="product-label">MOST POPULAR</span>
+            </div>
+            <div class="product-info">
+                <h3><span class="product-number">01.</span> LA LAGARTIJA</h3>
+                <p class="description">A medium roast coffee with bright citrus notes and a smooth finish.</p>
+                <div class="product-details">
+                    <p class="roasting">ROASTING: 5/10</p>
+                    <p class="intensity">INTENSITY: 9/10</p>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <div class="product-image">
+                <img src="images/coffee-2.png" alt="Coffee product 2">
+            </div>
+            <div class="product-info">
+                <h3><span class="product-number">02.</span> EL TIGRE</h3>
+                <p class="description">A bold dark roast with rich cocoa undertones and a fierce flavor.</p>
+                <div class="product-details">
+                    <p class="roasting">ROASTING: 8/10</p>
+                    <p class="intensity">INTENSITY: 7/10</p>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <div class="product-image">
+                <img src="images/coffee-3.png" alt="Coffee product 3">
+            </div>
+            <div class="product-info">
+                <h3><span class="product-number">03.</span> LA CUCARACHA</h3>
+                <p class="description">A light roast with sweet aroma and delicate nutty notes.</p>
+                <div class="product-details">
+                    <p class="roasting">ROASTING: 2/10</p>
+                    <p class="intensity">INTENSITY: 6/10</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Kontakt -->
+    <section class="page about" id="about">
+        <div class="about-content">
+            <h2 class="section-title">ABOUT US</h2>
+            <hr class="section-divider">
+
+            <p class="about-description">
+                Who are we? Just a bunch of friends with<br>
+                a love for a good coffee and desire to create<br>
+                something new, something original.
+            </p>
+            <p class="about-description">
+                Our coffees reflect us – young, wild and free.<br>
+                We are on the journey of new tastes...
+            </p>
+            <p class="about-cta">Join us!</p>
+        </div>
+    </section>
+
     <section class="page contact" id="contact">
         <div class="container">
             <h2 class="section-title">CONTACT US</h2>
@@ -66,15 +117,15 @@
         </div>
     </section>
 
-    <!-- Stopka -->
+    <!-- FOOTER -->
     <footer>
         <p>&copy; 2025 EL TIGRE Inc.</p>
     </footer>
 
-    <!-- Ikony FontAwesome -->
+    <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-    <!-- Twój główny JS -->
+    <!-- Main JS -->
     <script type="module" src="js/app.js"></script>
 </body>
 

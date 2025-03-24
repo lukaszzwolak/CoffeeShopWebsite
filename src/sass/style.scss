@@ -4,7 +4,6 @@
 @use 'variables' as *;
 
 // common styles
-
 @use 'normalize';
 @use 'layout';
 @use 'global';
@@ -16,12 +15,3 @@
 @use 'pages/contactPage';
 @use 'pages/about';
 @use 'pages/footer';
-
-.container {
-  max-width: 1200px;
-  /* Ograniczamy szerokość strony */
-  margin: 0 auto;
-  /* Wyśrodkowanie */
-  padding: 0 20px;
-  /* Marginesy boczne */
-}
