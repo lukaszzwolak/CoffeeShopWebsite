@@ -26,7 +26,8 @@
         }
     ],
     "about": {
-        "description": "Who are we? Just a bunch of friends with a love for a good coffee and a desire to create something new, something original.",
+        "description1": "Who are we? Just a bunch of friends with a love for a good coffee and desire to create something new, something original.",
+        "description2": "Our coffees reflect us - young, wild and free. We are on the journey of new tastes...",
         "cta": "Join us!"
     }
 }

@@ -58,9 +58,12 @@ const app = {
   },
 
   renderAbout(about) {
-    const desc = document.querySelector('.about-description');
-    const cta = document.querySelector('.about-join-us');
-    if (desc) desc.textContent = about.description;
+    const desc1 = document.querySelectorAll('.about-description')[0];
+    const desc2 = document.querySelectorAll('.about-description')[1];
+    const cta = document.querySelector('.about-cta');
+
+    if (desc1) desc1.textContent = about.description1;
+    if (desc2) desc2.textContent = about.description2;
     if (cta) cta.textContent = about.cta;
   },
 
