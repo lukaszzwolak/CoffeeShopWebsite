@@ -30,15 +30,31 @@
         </header>
 
         <div class="hero-content">
-            <h1 class="hero-title">HOME OF<br>ORIGINAL TASTES</h1>
-            <hr class="hero-divider">
-            <a href="#products" class="btn-arrow">DISCOVER <i class="fas fa-arrow-down"></i></a>
+            <h1 class="hero-title">
+                <span class="left">HOME OF</span><br>
+                <span class="right">ORIGINAL TASTES</span>
+            </h1>
+        </div>
+
+        <div class="hero-cta">
+            <a href="#products" class="btn-arrow">
+                DISCOVER
+            </a>
+            <span class="icon-circle">
+                <i class="icon-down-big"></i>
+            </span>
         </div>
     </section>
 
     <!-- PRODUCTS SECTION -->
-    <section class="products-section">
-        <h2>Products</h2>
+    <section class="products-section" id="products">
+        <h2 class="section-title">Products</h2>
+        <hr class="section-divider">
+
+        <div id="product-list">
+            <p>Loading products...</p>
+        </div>
+        <!-- czy usunac producty bo sa renderowane w app.js-->
         <div class="product">
             <div class="product-image">
                 <img src="images/coffee-1.png" alt="Coffee product 1">
@@ -53,6 +69,7 @@
                 </div>
             </div>
         </div>
+
         <div class="product">
             <div class="product-image">
                 <img src="images/coffee-2.png" alt="Coffee product 2">
@@ -66,6 +83,7 @@
                 </div>
             </div>
         </div>
+
         <div class="product">
             <div class="product-image">
                 <img src="images/coffee-3.png" alt="Coffee product 3">
@@ -92,7 +110,7 @@
                 something new, something original.
             </p>
             <p class="about-description">
-                Our coffees reflect us – young, wild and free.<br>
+                Our coffees reflect us - young, wild and free.<br>
                 We are on the journey of new tastes...
             </p>
             <p class="about-cta">Join us!</p>
@@ -121,9 +139,6 @@
     <footer>
         <p>&copy; 2025 EL TIGRE Inc.</p>
     </footer>
-
-    <!-- Font Awesome Icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     <!-- Main JS -->
     <script type="module" src="js/app.js"></script>

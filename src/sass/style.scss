@@ -9,9 +9,12 @@
 @use 'global';
 @use 'typography';
 
+
 // pages
 @use 'pages/homepage';
 @use 'pages/productsPage';
 @use 'pages/contactPage';
 @use 'pages/about';
 @use 'pages/footer';
+
+@use 'icons';

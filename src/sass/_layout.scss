@@ -8,7 +8,6 @@
 }
 
 .header {
-  background-color: $primaryColor;
   color: $whiteColor;
   text-align: center;
   padding: $spacing-base;
@@ -41,12 +40,4 @@
   .right {
     width: 100%;
   }
-}
-
-.page {
-  display: none;
-}
-
-.page.active {
-  display: block;
 }
