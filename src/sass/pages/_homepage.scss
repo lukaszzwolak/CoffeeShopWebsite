@@ -57,7 +57,7 @@
 
     .right {
       text-align: right;
-      transform: translateX(30px) translateY(-150px); // zamiast %
+      transform: translateX(30px) translateY(-150px);
       white-space: nowrap;
       text-decoration: none;
       position: relative;
@@ -131,7 +131,7 @@
   margin-left: auto;
   margin-top: 43px;
   margin-right: 0;
-  transform: translateX(30px); // delikatne przesunięcie bez wypychania
+  transform: translateX(40px);
 
   a {
     font-size: 22px;
@@ -156,42 +156,41 @@
 /* --------------------- */
 .hero-cta {
   position: absolute;
-  bottom: 100px; // pozycjonowanie całego bloku
+  bottom: 100px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .btn-wrapper {
+    margin-bottom: 20px;
+  }
 
   .btn-arrow {
     font-size: 2.4rem;
     font-weight: bold;
     color: white;
-    background: none;
-    border: none;
-    text-decoration: none;
-    padding: 16px 30px;
-    cursor: pointer;
     letter-spacing: 8px;
-    transition: transform 0.3s ease, color 0.3s ease;
+  }
 
-    &:hover {
-      color: darken($primaryColor, 10%);
-      transform: scale(1.05);
-    }
+  .icon-wrapper {
+    display: flex;
+    justify-content: center;
   }
 
   .icon-circle {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 45px; // ➊ mniejsze koło
-    height: 45px;
-    border: 3px solid white; // ➋ grubsza obramówka
+    width: 35px;
+    height: 35px;
+    border: 6px solid white;
     border-radius: 50%;
-    margin-top: 20px; // ➌ odstęp od DISCOVER
-    font-size: 18px;
+    font-size: 20px;
     color: white;
-    transition: background 0.3s, transform 0.3s;
 
     i {
       font-size: 1em;
@@ -204,8 +203,6 @@
     }
   }
 }
-
-
 
 /* --------------------- */
 /* RESPONSIVE            */

@@ -23,7 +23,7 @@
                     <ul class="nav-links">
                         <li><a href="#home" class="nav-link">HOME</a></li>
                         <li><a href="#products" class="nav-link">PRODUCTS</a></li>
-                        <li><a href="#contact" class="nav-link">CONTACT</a></li>
+                        <li><a href="contact.html" class="nav-link">CONTACT</a></li>
                     </ul>
                 </nav>
             </div>
@@ -37,12 +37,14 @@
         </div>
 
         <div class="hero-cta">
-            <a href="#products" class="btn-arrow">
-                DISCOVER
-            </a>
-            <span class="icon-circle">
-                <i class="icon-down-big"></i>
-            </span>
+            <div class="btn-wrapper">
+                <a class="btn-arrow">DISCOVER</a>
+            </div>
+            <div class="icon-wrapper">
+                <a href="#products" class="icon-circle">
+                    <i class="icon-down-big"></i>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -54,7 +56,6 @@
         <div id="product-list">
             <p>Loading products...</p>
         </div>
-        <!-- czy usunac producty bo sa renderowane w app.js-->
         <div class="product">
             <div class="product-image">
                 <img src="images/coffee-1.png" alt="Coffee product 1">
@@ -117,15 +118,16 @@
         </div>
     </section>
 
+    <!-- CONTACT SECTION -->
     <section class="page contact" id="contact">
         <div class="container">
             <h2 class="section-title">CONTACT US</h2>
             <form action="#" class="contact-form">
                 <label for="name">NAME</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" required />
 
                 <label for="title">TITLE</label>
-                <input type="text" id="title" name="title" required>
+                <input type="text" id="title" name="title" required />
 
                 <label for="message">MESSAGE</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
