@@ -10,125 +10,108 @@
 </head>
 
 <body>
-    <!-- HERO SECTION -->
-    <section class="page hero" id="home">
-        <header class="header">
-            <div class="navbar">
-                <div class="logo">
-                    <span class="logo-text">
-                        EL TIGRE<br /><small>VENEZUELA COFFEE BEANS</small>
-                    </span>
+    <!-- HOME PAGE -->
+    <section class="js-page page home" id="home">
+        <!-- HERO SECTION -->
+        <div class="hero">
+            <header class="header">
+                <div class="navbar">
+                    <div class="logo">
+                        <span class="logo-text">
+                            EL TIGRE<br><small>VENEZUELA COFFEE BEANS</small>
+                        </span>
+                    </div>
+                    <nav class="nav">
+                        <ul class="nav-links">
+                            <li><a href="#home" class="nav-link">HOME</a></li>
+                            <li><a href="#products" class="nav-link">PRODUCTS</a></li>
+                            <li><a href="#contact" class="nav-link">CONTACT</a></li>
+                        </ul>
+                    </nav>
                 </div>
-                <nav class="nav">
-                    <ul class="nav-links">
-                        <li><a href="#home" class="nav-link">HOME</a></li>
-                        <li><a href="#products" class="nav-link">PRODUCTS</a></li>
-                        <li><a href="contact.html" class="nav-link">CONTACT</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+            </header>
 
-        <div class="hero-content">
-            <h1 class="hero-title">
-                <span class="left">HOME OF</span><br />
-                <span class="right">ORIGINAL TASTES</span>
-            </h1>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="left">HOME OF</span><br />
+                    <span class="right">ORIGINAL TASTES</span>
+                </h1>
+            </div>
+
+            <div class="hero-cta">
+                <div class="btn-wrapper">
+                    <a class="btn-arrow">DISCOVER</a>
+                </div>
+                <div class="icon-wrapper">
+                    <a href="#products" class="icon-circle">
+                        <i class="icon-down-big"></i>
+                    </a>
+                </div>
+            </div>
         </div>
 
-        <div class="hero-cta">
-            <div class="btn-wrapper">
-                <a class="btn-arrow">DISCOVER</a>
-            </div>
-            <div class="icon-wrapper">
-                <a href="#products" class="icon-circle">
-                    <i class="icon-down-big"></i>
-                </a>
+        <!-- PRODUCTS SECTION (wewnątrz HOME, ukryta na start) -->
+        <section class="products-section hidden" id="products">
+            <h2 class="section-title">Products</h2>
+            <hr class="section-divider" />
+            <div id="product-list"></div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <div class="about">
+            <div class="overlay"></div>
+            <div class="about-content">
+                <h2 class="about-title">ABOUT US</h2>
+
+                <div class="about-text-wrapper">
+                    <p class="about-description">
+                        Who are we? Just a bunch of friends with<br />
+                        a love for a good coffee and desire to create<br />
+                        something new, something original.
+                    </p>
+                    <p class="about-description">
+                        Our coffees reflect us – young, wild and free.<br />
+                        We are on the journey of new tastes...
+                    </p>
+                </div>
+
+                <p class="about-join-us">Join us!</p>
             </div>
         </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>&copy; 2025 EL TIGRE Inc.</p>
+        </footer>
     </section>
 
-    <!-- PRODUCTS SECTION -->
-    <section class="page products-section" id="products">
+    <!-- PRODUCTS PAGE -->
+    <section class="js-page page products" id="products">
         <h2 class="section-title">Products</h2>
         <hr class="section-divider" />
+        <div id="product-list"></div>
+    </section>
 
-        <div class="product">
-            <div class="product-image">
-                <img src="images/coffee-1.png" alt="Coffee product 1" />
-                <span class="product-label">MOST POPULAR</span>
-            </div>
-            <div class="product-info">
-                <h3><span class="product-number">01.</span> LA LAGARTIJA</h3>
-                <p class="description">
-                    Mysterious and treacherous... The best choice for the start of your journey! It will provide you a
-                    rich delicious flavor.
-                </p>
-                <div class="product-details">
-                    <p>ROASTING: <span>5/10</span></p>
-                    <p>INTENSITY: <span>6/10</span></p>
-                </div>
-            </div>
-        </div>
+    <!-- CONTACT PAGE -->
+    <section class="js-page page contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">CONTACT US</h2>
+            <form action="#" class="contact-form">
+                <label for="name">NAME</label>
+                <input type="text" id="name" name="name" required />
 
-        <div class="product">
-            <div class="product-image">
-                <img src="images/coffee-2.png" alt="Coffee product 2" />
-            </div>
-            <div class="product-info">
-                <h3><span class="product-number">02.</span> EL TIGRE</h3>
-                <p class="description">
-                    A bold dark roast with rich cocoa undertones and a fierce flavor.
-                </p>
-                <div class="product-details">
-                    <p>ROASTING: <span>8/10</span></p>
-                    <p>INTENSITY: <span>7/10</span></p>
-                </div>
-            </div>
-        </div>
+                <label for="title">TITLE</label>
+                <input type="text" id="title" name="title" required />
 
-        <div class="product">
-            <div class="product-image">
-                <img src="images/coffee-3.png" alt="Coffee product 3" />
-            </div>
-            <div class="product-info">
-                <h3><span class="product-number">03.</span> LA CUCARACHA</h3>
-                <p class="description">
-                    A light roast with sweet aroma and delicate nutty notes.
-                </p>
-                <div class="product-details">
-                    <p>ROASTING: <span>2/10</span></p>
-                    <p>INTENSITY: <span>6/10</span></p>
-                </div>
-            </div>
+                <label for="message">MESSAGE</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">SUBMIT</button>
+            </form>
         </div>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section class="page about" id="about">
-        <div class="about-content">
-            <h2 class="section-title">ABOUT US</h2>
-            <hr class="section-divider" />
-
-            <p class="about-description">
-                Who are we? Just a bunch of friends with<br />
-                a love for a good coffee and desire to create<br />
-                something new, something original.
-            </p>
-            <p class="about-description">
-                Our coffees reflect us - young, wild and free.<br />
-                We are on the journey of new tastes...
-            </p>
-            <p class="about-cta">Join us!</p>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2025 EL TIGRE Inc.</p>
-    </footer>
-
-    <!-- Main JS -->
+    <!-- MAIN JS -->
     <script type="module" src="js/app.js"></script>
 </body>
 

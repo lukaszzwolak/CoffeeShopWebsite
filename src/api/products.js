@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3131';
+import { API_URL } from "./settings.js";
 
 export const getProducts = (callback) => {
     fetch(API_URL + '/products')

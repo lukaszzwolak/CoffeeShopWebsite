@@ -25,3 +25,20 @@ p {
   font-weight: $fontWeightRegular;
   line-height: 1.6;
 }
+
+.page {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+.products-section {
+  transition: all 0.4s ease-in-out;
+  opacity: 1;
+}
