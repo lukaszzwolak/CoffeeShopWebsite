@@ -1,21 +1,13 @@
-/* src/sass/pages/_footer.scss */
-
 @use "../variables" as *;
 
 footer {
-  background-color: #BEA67C;
+  background-color: #fff;
   padding: 15px 0;
   text-align: center;
-  color: #FFF;
+  color: #111;
   font-size: 14px;
-}
-
-.footer-content {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 16px;
   font-weight: 400;
-  max-width: 1100px;
-  margin: 0 auto;
 }
 
 @media (max-width: 768px) {

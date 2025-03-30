@@ -1,5 +1,3 @@
-/* src/sass/pages/_contactPage.scss */
-
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
@@ -27,6 +25,7 @@
   border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .contact-form button:hover {

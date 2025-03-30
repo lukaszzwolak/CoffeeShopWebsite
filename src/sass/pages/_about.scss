@@ -12,7 +12,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.75);
   }
 
   .about-content {
@@ -46,11 +46,9 @@
   .about-text-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; // tekst pisany od lewej, ale całość wyśrodkowana przez about-content
+    align-items: flex-start;
     gap: 16px;
     margin-top: 10px;
-
-    // Możesz łatwo manipulować:
     padding-left: 260px;
   }
 
@@ -79,9 +77,6 @@
   }
 }
 
-/* -------------------- */
-/* Responsive */
-/* -------------------- */
 @media (max-width: 768px) {
   .about {
     padding: 50px 20px;
@@ -115,5 +110,6 @@
   .about-text-wrapper {
     align-items: center;
     text-align: center;
+    padding-left: 0;
   }
 }
