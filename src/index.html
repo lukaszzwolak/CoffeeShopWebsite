@@ -10,59 +10,50 @@
 </head>
 
 <body>
-    <!-- HOME PAGE -->
-    <section class="js-page page home" id="home">
-        <!-- HERO SECTION -->
-        <div class="hero">
-            <header class="header">
-                <div class="navbar">
-                    <div class="logo">
-                        <span class="logo-text">
-                            EL TIGRE<br><small>VENEZUELA COFFEE BEANS</small>
-                        </span>
-                    </div>
-                    <nav class="nav">
-                        <ul class="nav-links">
-                            <li><a href="#home" class="nav-link">HOME</a></li>
-                            <li><a href="#products" class="nav-link">PRODUCTS</a></li>
-                            <li><a href="#contact" class="nav-link">CONTACT</a></li>
-                        </ul>
-                    </nav>
+    <!-- HERO + NAVIGATION -->
+    <div class="hero">
+        <header class="header">
+            <div class="navbar">
+                <div class="logo">
+                    <span class="logo-text">
+                        EL TIGRE<br><small>VENEZUELA COFFEE BEANS</small>
+                    </span>
                 </div>
-            </header>
-
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    <span class="left">HOME OF</span><br />
-                    <span class="right">ORIGINAL TASTES</span>
-                </h1>
+                <nav class="nav">
+                    <ul class="nav-links">
+                        <li><a href="#home" class="nav-link">HOME</a></li>
+                        <li><a href="#products" class="nav-link">PRODUCTS</a></li>
+                        <li><a href="#contact" class="nav-link">CONTACT</a></li>
+                    </ul>
+                </nav>
             </div>
+        </header>
 
-            <div class="hero-cta">
-                <div class="btn-wrapper">
-                    <a class="btn-arrow">DISCOVER</a>
-                </div>
-                <div class="icon-wrapper">
-                    <a href="#products" class="icon-circle">
-                        <i class="icon-down-big"></i>
-                    </a>
-                </div>
-            </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="left">HOME OF</span><br />
+                <span class="right">ORIGINAL TASTES</span>
+            </h1>
         </div>
 
-        <!-- PRODUCTS SECTION (wewnątrz HOME, ukryta na start) -->
-        <section class="products-section hidden" id="products">
-            <h2 class="section-title">Products</h2>
-            <hr class="section-divider" />
-            <div id="product-list"></div>
-        </section>
+        <div class="hero-cta">
+            <div class="btn-wrapper">
+                <a href="#products" class="btn-arrow" id="reveal-products">DISCOVER</a>
+            </div>
+            <div class="icon-wrapper">
+                <a href="#products" class="icon-circle" id="reveal-products">
+                    <i class="icon-down-big"></i>
+                </a>
+            </div>
+        </div>
+    </div>
 
-        <!-- ABOUT SECTION -->
+    <!-- HOME SECTION -->
+    <section class="js-page page home" id="home">
         <div class="about">
             <div class="overlay"></div>
             <div class="about-content">
                 <h2 class="about-title">ABOUT US</h2>
-
                 <div class="about-text-wrapper">
                     <p class="about-description">
                         Who are we? Just a bunch of friends with<br />
@@ -74,26 +65,22 @@
                         We are on the journey of new tastes...
                     </p>
                 </div>
-
                 <p class="about-join-us">Join us!</p>
             </div>
         </div>
-
-        <!-- FOOTER -->
-        <footer>
-            <p>&copy; 2025 EL TIGRE Inc.</p>
-        </footer>
     </section>
 
-    <!-- PRODUCTS PAGE -->
-    <section class="js-page page products" id="products">
+    <!-- PRODUCTS SECTION -->
+    <section class="js-page page" id="products">
         <h2 class="section-title">Products</h2>
         <hr class="section-divider" />
-        <div id="product-list"></div>
+        <div id="product-list">
+            <!-- Produkty zostaną dodane przez JS -->
+        </div>
     </section>
 
-    <!-- CONTACT PAGE -->
-    <section class="js-page page contact" id="contact">
+    <!-- CONTACT SECTION -->
+    <section class="js-page page" id="contact">
         <div class="container">
             <h2 class="section-title">CONTACT US</h2>
             <form action="#" class="contact-form">
@@ -111,8 +98,13 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 EL TIGRE Inc.</p>
+    </footer>
+
     <!-- MAIN JS -->
-    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/App.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,4 @@
+// src/js/App.js
 import { getProducts } from '../api/products.js';
 import { Products } from './Products.js';
 import { ContactForm } from './ContactForm.js';
@@ -6,26 +7,24 @@ class App {
   constructor(container) {
     this.container = container;
 
-    this.addNavigation();
-    getProducts((products) => {
-      new Products(this.container.querySelector('#products'), products);
-    }); // bind()
+    this.pages = this.container.querySelectorAll('.js-page');
+    this.navLinks = this.container.querySelectorAll('.nav-link');
 
-    new ContactForm(this.container.querySelector('#contact'));
+    this.addNavigation();
+    this.initProducts();
+    this.initContactForm();
     this.setupHeroCTA();
   }
 
   addNavigation() {
-    const pages = this.container.querySelectorAll('.js-page');
-    const navLinks = this.container.querySelectorAll('.nav-link');
-
     const activatePage = (pageId) => {
-      pages.forEach((page) => {
+      this.pages.forEach((page) => {
         page.classList.toggle('active', page.id === pageId);
       });
 
-      navLinks.forEach((link) => {
-        link.classList.toggle('active', link.getAttribute('href') === `#${pageId}`);
+      this.navLinks.forEach((link) => {
+        const href = link.getAttribute('href');
+        link.classList.toggle('active', href === `#${pageId}`);
       });
     };
 
@@ -34,23 +33,38 @@ class App {
       activatePage(pageId);
     });
 
+    // Initial load
     const initialPage = window.location.hash.replace('#', '') || 'home';
     activatePage(initialPage);
   }
 
   setupHeroCTA() {
-    const arrowIcon = document.querySelector('#reveal-products');
-    const productsSection = document.querySelector('#products');
+    const arrowIcons = this.container.querySelectorAll('#reveal-products');
+    const productsSection = this.container.querySelector('#products');
 
-    arrowIcon?.addEventListener('click', (e) => {
-      e.preventDefault();
-
-      // Show products section
-      productsSection.classList.remove('hidden');
-
-      // Scroll to it smoothly
-      productsSection.scrollIntoView({ behavior: 'smooth' });
+    arrowIcons.forEach((icon) => {
+      icon.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.hash = 'products';
+        productsSection.scrollIntoView({ behavior: 'smooth' });
+      });
     });
+  }
+
+  initProducts() {
+    const productList = this.container.querySelector('#product-list');
+    if (productList) {
+      getProducts((products) => {
+        new Products(productList, products);
+      });
+    }
+  }
+
+  initContactForm() {
+    const contactFormEl = this.container.querySelector('.contact-form');
+    if (contactFormEl) {
+      new ContactForm(contactFormEl);
+    }
   }
 }
 
