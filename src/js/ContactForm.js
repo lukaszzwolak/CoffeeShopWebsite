@@ -1,3 +1,5 @@
+import { postContact } from '../api/contact.js';
+
 export class ContactForm {
     constructor(formElement) {
         this.form = formElement;
@@ -14,8 +16,12 @@ export class ContactForm {
             const message = this.form.querySelector('#message').value.trim();
 
             if (name && title && message) {
-                this.displayMessage('✅ Message sent successfully!', 'success');
-                this.form.reset();
+                const contactData = { name, title, message };
+
+                postContact(contactData, () => {
+                    this.displayMessage('✅ Message sent successfully!', 'success');
+                    this.form.reset();
+                });
             } else {
                 this.displayMessage('⚠️ Please fill in all fields.', 'error');
             }
