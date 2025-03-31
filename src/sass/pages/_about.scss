@@ -3,7 +3,7 @@
 .about {
   background: url("../../images/about-us.jpg") center/cover no-repeat;
   position: relative;
-  padding: 80px 0;
+  padding: 40px 0;
   color: $whiteColor;
 
   .overlay {
@@ -21,7 +21,7 @@
     margin: 0 auto;
     padding: 0 40px;
     z-index: 1;
-    text-align: left;
+    text-align: center;
   }
 
   .about-title {
@@ -30,7 +30,7 @@
     letter-spacing: 10px;
     word-spacing: 8px;
     color: $primaryColor;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     text-align: center;
 
     &::after {
@@ -43,73 +43,104 @@
     }
   }
 
-  .about-text-wrapper {
+  .about-carousel {
+    position: relative;
+    min-height: 280px;
+  }
+
+  .carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px); // start poza osią
+    transition: opacity 0.6s ease, transform 0.6s ease;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-    margin-top: 10px;
-    padding-left: 260px;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0); // animowane wejście
+      position: relative;
+    }
+
+    .carousel-avatar {
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid $primaryColor;
+      flex-shrink: 0;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .carousel-info {
+      padding-left: 10px;
+      color: $whiteColor;
+      max-width: 500px;
+
+      h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+
+        strong {
+          font-weight: 700;
+          color: $primaryColor;
+        }
+      }
+
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.6;
+        color: #f1f1f1;
+      }
+    }
   }
 
-  .about-description {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1.8;
-    color: white;
-  }
-
-  .about-join-us {
-    font-weight: 600;
-    font-size: 24px;
-    margin-top: 60px;
-    text-align: right;
-    padding-right: 20px;
-  }
-
-  .about-author {
-    font-size: 18px;
-    margin-top: 40px;
-    text-align: center;
-    font-style: italic;
-    opacity: 0.8;
-    color: $primaryColor;
-  }
 }
 
 @media (max-width: 768px) {
   .about {
     padding: 50px 20px;
-  }
 
-  .about-title {
-    font-size: 32px;
-    letter-spacing: 6px;
-    word-spacing: 4px;
+    .about-title {
+      font-size: 32px;
+      letter-spacing: 6px;
+      word-spacing: 4px;
 
-    &::after {
-      width: 100px;
-      margin-top: 18px;
+      &::after {
+        width: 100px;
+        margin-top: 18px;
+      }
     }
-  }
 
-  .about-description {
-    font-size: 18px;
-  }
+    .carousel-slide {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
 
-  .about-join-us {
-    font-size: 18px;
-    text-align: center;
-    padding-right: 0;
-  }
+      .carousel-avatar {
+        width: 120px;
+        height: 120px;
+      }
 
-  .about-author {
-    font-size: 16px;
-  }
+      .carousel-info {
+        h3 {
+          font-size: 18px;
+        }
 
-  .about-text-wrapper {
-    align-items: center;
-    text-align: center;
-    padding-left: 0;
+        p {
+          font-size: 15px;
+        }
+      }
+    }
   }
 }

@@ -1,7 +1,7 @@
-// src/js/App.js
 import { getProducts } from '../api/products.js';
 import { Products } from './Products.js';
 import { ContactForm } from './ContactForm.js';
+import { getData } from '../api/data.js';
 
 class App {
   constructor(container) {
@@ -15,6 +15,7 @@ class App {
     this.initContactForm();
     this.setupHeroCTA();
     this.setRandomHeroTitle();
+    this.loadAboutCarousel();
   }
 
   addNavigation() {
@@ -34,7 +35,6 @@ class App {
       activatePage(pageId);
     });
 
-    // Initial load
     const initialPage = window.location.hash.replace('#', '') || 'home';
     activatePage(initialPage);
   }
@@ -89,6 +89,46 @@ class App {
         <span class="right">${right.toUpperCase()}</span>
       `;
     }
+  }
+
+  loadAboutCarousel() {
+    const carouselWrapper = document.querySelector('.about-carousel');
+
+    if (!carouselWrapper) return;
+
+    getData((data) => {
+      const { employees } = data;
+      if (!employees || !Array.isArray(employees)) return;
+
+      carouselWrapper.innerHTML = employees
+        .map((employee, index) => {
+          return `
+            <div class="carousel-slide ${index === 0 ? 'active' : ''}">
+              <img src="images/${employee.image}" alt="${employee.name}" class="carousel-avatar">
+              <div class="carousel-info">
+                <h3>${employee.name.split(' ')[0]} <strong>${employee.name.split(' ')[1]}</strong></h3>
+                <p>${employee.quote}</p>
+              </div>
+            </div>
+          `;
+        })
+        .join('');
+
+      this.startAboutCarousel();
+    });
+  }
+
+  startAboutCarousel() {
+    const slides = document.querySelectorAll('.carousel-slide');
+    if (slides.length <= 1) return;
+
+    let current = 0;
+
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 5000);
   }
 }
 

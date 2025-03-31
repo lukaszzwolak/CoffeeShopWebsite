@@ -36,5 +36,24 @@
         "description2": "Our coffees reflect us - young, wild and free. We are on the journey of new tastes...",
         "cta": "Join us!"
     },
-    "contact": []
+    "contact": [],
+    "app": {
+        "employees": [
+            {
+                "name": "Elizabeth Doherty",
+                "image": "1.png",
+                "quote": "Experienced barista from Bahamas. She says that Venezuela has opened her eyes on coffee. “It’s not about the taste”, she says. “It’s all about the feelings”."
+            },
+            {
+                "name": "Max Selfish",
+                "image": "2.png",
+                "quote": "Max is the austrian barista with years of experience from the hotels across the whole Europe. “Venezuela coffee was a lightening experience for me! I have never drunk such an amazing coffee!”, he says."
+            },
+            {
+                "name": "Ping Nihao",
+                "image": "3.png",
+                "quote": "Ping is the youngest in the team. He doesn’t like calling coffee a mysterious act. He says, a good coffee is like a mathematical formula. Once you figured it out, every coffee you make is a masterpiece."
+            }
+        ]
+    }
 }
