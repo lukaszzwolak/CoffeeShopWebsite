@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.html",
     "scripts": {
-        "start": "npm run watch",
+        "start": "node server.mjs",
         "init-project": "npm install && npm-run-all init:*",
         "init:dirs": "mkdirp dist src/sass src/css src/vendor src/images src/js src/db",
         "init:files": "touch README.md src/index.html src/sass/style.scss src/js/script.js src/db/app.json",
@@ -48,6 +48,7 @@
         "stylelint-scss": "^3.5.4"
     },
     "dependencies": {
+        "express": "^5.1.0",
         "json-server": "^0.16.3",
         "sass": "^1.35.1"
     }
