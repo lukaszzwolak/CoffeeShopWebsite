@@ -10,65 +10,65 @@
 </head>
 
 <body>
-    <!-- HERO + NAVIGATION -->
-    <div class="hero">
-        <header class="header">
-            <div class="navbar">
-                <div class="logo">
-                    <span class="logo-text">
-                        EL TIGRE<br><small>VENEZUELA COFFEE BEANS</small>
-                    </span>
+    <div class="page-wrapper">
+        <!-- HERO + NAVIGATION -->
+        <div class="hero">
+            <header class="header">
+                <div class="navbar">
+                    <div class="logo">
+                        <span class="logo-text">
+                            EL TIGRE<br><small>VENEZUELA COFFEE BEANS</small>
+                        </span>
+                    </div>
+                    <nav class="nav">
+                        <ul class="nav-links">
+                            <li><a href="#home" class="nav-link">HOME</a></li>
+                            <li><a href="#products" class="nav-link">PRODUCTS</a></li>
+                            <li><a href="#contact" class="nav-link">CONTACT</a></li>
+                        </ul>
+                    </nav>
                 </div>
-                <nav class="nav">
-                    <ul class="nav-links">
-                        <li><a href="#home" class="nav-link">HOME</a></li>
-                        <li><a href="#products" class="nav-link">PRODUCTS</a></li>
-                        <li><a href="#contact" class="nav-link">CONTACT</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+            </header>
 
-        <div class="hero-content">
-            <h1 class="hero-title" id="hero-title">
-                <span class="left">HOME OF</span><br />
-                <span class="right">ORIGINAL TASTES</span>
-            </h1>
-        </div>
-
-        <div class="hero-cta">
-            <div class="btn-wrapper">
-                <a href="#products" class="btn-arrow" id="reveal-products">DISCOVER</a>
+            <div class="hero-content">
+                <h1 class="hero-title" id="hero-title">
+                    <span class="left">HOME OF</span><br />
+                    <span class="right">ORIGINAL TASTES</span>
+                </h1>
             </div>
-            <div class="icon-wrapper">
-                <a href="#products" class="icon-circle" id="reveal-products">
-                    <i class="icon-down-big"></i>
-                </a>
+
+            <div class="hero-cta">
+                <div class="btn-wrapper">
+                    <a href="#products" class="btn-arrow" id="reveal-products">DISCOVER</a>
+                </div>
+                <div class="icon-wrapper">
+                    <a href="#products" class="icon-circle" id="reveal-products">
+                        <i class="icon-down-big"></i>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- PRODUCTS SECTION (ZARAZ PO HERO) -->
-    <section class="products-section hidden fade-target" id="products">
-        <h2 class="section-title">Products</h2>
-        <hr class="section-divider" />
-        <div id="product-list"></div>
-    </section>
+        <!-- PRODUCTS SECTION (ZARAZ PO HERO) -->
+        <section class="products-section hidden fade-target" id="products">
+            <h2 class="section-title">Products</h2>
+            <hr class="section-divider" />
+            <div id="product-list"></div>
+        </section>
 
-    <!-- ABOUT US SECTION -->
-    <section class="js-page page" id="home">
-        <div class="about">
-            <div class="overlay"></div>
-            <div class="about-content">
-                <h2 class="about-title">ABOUT US</h2>
-                <div class="about-carousel"></div>
+        <!-- ABOUT US SECTION -->
+        <section class="js-page page" id="home">
+            <div class="about">
+                <div class="overlay"></div>
+                <div class="about-content">
+                    <h2 class="about-title">ABOUT US</h2>
+                    <div class="about-carousel"></div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CONTACT SECTION -->
-    <section class="js-page page" id="contact">
-        <div class="container">
+        <!-- CONTACT SECTION -->
+        <section class="js-page page" id="contact">
             <h2 class="section-title">CONTACT US</h2>
             <form action="#" class="contact-form">
                 <label for="name">NAME</label>
@@ -83,13 +83,13 @@
                 <button type="submit">SUBMIT</button>
                 <p class="form-message" style="display: none;"></p>
             </form>
-        </div>
-    </section>
+        </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2025 EL TIGRE Inc.</p>
-    </footer>
+        <!-- FOOTER -->
+        <footer>
+            <p>&copy; 2025 EL TIGRE Inc.</p>
+        </footer>
+    </div>
 
     <!-- MAIN JS -->
     <script type="module" src="js/App.js"></script>

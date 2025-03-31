@@ -1,10 +1,11 @@
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
+  margin-top: 10px; // Formularz bliżej tytułu
   padding: 30px;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #000;
 }
 
 .contact-form input,
@@ -12,10 +13,11 @@
   width: 100%;
   padding: 12px;
   margin: 10px 0;
-  border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 1rem;
   font-family: inherit;
+  color: #000;
+  font-weight: bold;
 }
 
 .contact-form button {
@@ -27,11 +29,31 @@
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  display: block;
+  margin: 20px auto 0;
+  font-weight: bold;
 }
 
 .contact-form button:hover {
   background-color: #A88D5A;
   transform: translateY(-2px);
+}
+
+.section-title {
+  text-align: center;
+  position: relative;
+  font-size: 2rem;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 30%;
+    height: 3px;
+    background-color: #BEA67C;
+    margin: 12px auto 0;
+  }
 }
 
 .form-message {
@@ -46,4 +68,8 @@
   &.error {
     color: red;
   }
+}
+
+#contact {
+  text-align: center;
 }

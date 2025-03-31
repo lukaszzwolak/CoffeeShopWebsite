@@ -5,7 +5,7 @@
 /* --------------------- */
 .hero {
   background: url("../../images/background.png");
-  background-size: 110%;
+  background-size: cover%;
   background-position: 70% 10%;
   position: relative;
   height: 108vh;
@@ -65,8 +65,8 @@
       &::after {
         content: "";
         position: absolute;
-        bottom: -70px;
-        left: 340px;
+        bottom: -30px;
+        left: 400px;
         width: 350px;
         height: 7px;
         background-color: #d1c6a9;
