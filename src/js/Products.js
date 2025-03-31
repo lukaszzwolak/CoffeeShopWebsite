@@ -57,9 +57,13 @@ export class Products {
               </svg>
             </div>
           </div>
-        ` : ''}  
+        ` : ''}
 
         <div class="product-image">
+          <div class="product-price-tag">
+            <span class="new-price">$${product.newPrice}</span>
+            <span class="old-price">$${product.oldPrice}</span>
+          </div>
           <img src="images/${product.image}" alt="${product.title}" />
         </div>
       `;

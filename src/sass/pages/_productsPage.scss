@@ -107,6 +107,44 @@
           0 12px 24px rgba(0, 0, 0, 0.2),
           0 0 0 4px rgba(184, 154, 103, 0.4);
       }
+
+      .product-price-tag {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100px;
+        height: 100px;
+        background-color: $primaryColor;
+        clip-path: polygon(100% 0, 100% 100%, 0 0);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding: 10px;
+        color: #fff;
+        z-index: 2;
+        transition: all 0.3s ease;
+
+        .new-price {
+          font-size: 1.3rem;
+          font-weight: 800;
+          margin-top: 1px;
+        }
+
+        .old-price {
+          font-size: 0.7rem;
+          text-decoration: line-through;
+          opacity: 0.6;
+          margin-top: 2px;
+        }
+
+        &:hover {
+          background-color: darken($primaryColor, 8%);
+          transform: translateY(-2px) scale(1.03);
+          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+          cursor: pointer;
+        }
+      }
     }
 
     .product-info {

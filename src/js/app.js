@@ -14,6 +14,7 @@ class App {
     this.initProducts();
     this.initContactForm();
     this.setupHeroCTA();
+    this.setRandomHeroTitle();
   }
 
   addNavigation() {
@@ -64,6 +65,29 @@ class App {
     const contactFormEl = this.container.querySelector('.contact-form');
     if (contactFormEl) {
       new ContactForm(contactFormEl);
+    }
+  }
+
+  setRandomHeroTitle() {
+    const slogans = [
+      'Home of Original Tastes',
+      'Real Venezuela, Real Coffee',
+      'Taste Real Venezuela'
+    ];
+
+    const random = slogans[Math.floor(Math.random() * slogans.length)];
+    const heroTitle = document.querySelector('#hero-title');
+
+    if (heroTitle) {
+      const words = random.split(' ');
+      const middleIndex = Math.ceil(words.length / 2);
+      const left = words.slice(0, middleIndex).join(' ');
+      const right = words.slice(middleIndex).join(' ');
+
+      heroTitle.innerHTML = `
+        <span class="left">${left.toUpperCase()}</span><br />
+        <span class="right">${right.toUpperCase()}</span>
+      `;
     }
   }
 }

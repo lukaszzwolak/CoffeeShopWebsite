@@ -6,7 +6,9 @@
             "description": "Mysterious and treacherous... A perfect start to your journey.",
             "image": "coffee-1.png",
             "roasting": 5,
-            "intensity": 6
+            "intensity": 6,
+            "oldPrice": "14.99",
+            "newPrice": "9.99"
         },
         {
             "id": 2,
@@ -14,7 +16,9 @@
             "description": "A dark coffee with hints of grapefruit and caramelized peanuts.",
             "image": "coffee-2.png",
             "roasting": 8,
-            "intensity": 9
+            "intensity": 9,
+            "oldPrice": "15.99",
+            "newPrice": "11.49"
         },
         {
             "id": 3,
@@ -22,7 +26,9 @@
             "description": "Sweet with notes of caramel, orange, and strawberry.",
             "image": "coffee-3.png",
             "roasting": 3,
-            "intensity": 7
+            "intensity": 7,
+            "oldPrice": "13.50",
+            "newPrice": "10.90"
         }
     ],
     "about": {
