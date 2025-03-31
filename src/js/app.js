@@ -19,6 +19,8 @@ class App {
   }
 
   addNavigation() {
+    const productsSection = document.querySelector('#products');
+
     const activatePage = (pageId) => {
       this.pages.forEach((page) => {
         page.classList.toggle('active', page.id === pageId);
@@ -28,6 +30,14 @@ class App {
         const href = link.getAttribute('href');
         link.classList.toggle('active', href === `#${pageId}`);
       });
+
+      if (pageId === 'products') {
+        productsSection.classList.remove('hidden');
+        productsSection.classList.add('fade-in');
+      } else {
+        productsSection.classList.add('hidden');
+        productsSection.classList.remove('fade-in');
+      }
     };
 
     window.addEventListener('hashchange', () => {
@@ -39,15 +49,28 @@ class App {
     activatePage(initialPage);
   }
 
+
   setupHeroCTA() {
     const arrowIcons = this.container.querySelectorAll('#reveal-products');
     const productsSection = this.container.querySelector('#products');
+    const contactSection = this.container.querySelector('#contact');
 
     arrowIcons.forEach((icon) => {
       icon.addEventListener('click', (e) => {
         e.preventDefault();
-        window.location.hash = 'products';
-        productsSection.scrollIntoView({ behavior: 'smooth' });
+
+        const currentHash = window.location.hash.replace('#', '') || 'home';
+
+        if (currentHash === 'contact') {
+          contactSection?.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          if (productsSection.classList.contains('hidden')) {
+            productsSection.classList.remove('hidden');
+            productsSection.classList.add('fade-in');
+          }
+
+          productsSection.scrollIntoView({ behavior: 'smooth' });
+        }
       });
     });
   }
