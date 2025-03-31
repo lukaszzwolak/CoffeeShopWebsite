@@ -1,11 +1,8 @@
 @use "../variables" as *;
 
-/* --------------------- */
-/* HERO SECTION          */
-/* --------------------- */
 .hero {
   background: url("../../images/background.png");
-  background-size: cover%;
+  background-size: cover;
   background-position: 70% 10%;
   position: relative;
   height: 108vh;
@@ -52,14 +49,12 @@
     .left {
       text-align: left;
       transform: translate(-12%, -20px);
-      text-decoration: none;
     }
 
     .right {
       text-align: right;
       transform: translateX(30px) translateY(-150px);
       white-space: nowrap;
-      text-decoration: none;
       position: relative;
 
       &::after {
@@ -75,9 +70,6 @@
   }
 }
 
-/* --------------------- */
-/* HEADER & NAVIGATION   */
-/* --------------------- */
 .header {
   position: absolute;
   top: 0;
@@ -108,8 +100,6 @@
     text-transform: uppercase;
     letter-spacing: 13px;
     line-height: 1.2;
-    text-align: left;
-
     position: relative;
     left: -105px;
     top: 10px;
@@ -150,10 +140,6 @@
   }
 }
 
-
-/* --------------------- */
-/* HERO TITLE & BUTTON   */
-/* --------------------- */
 .hero-cta {
   position: absolute;
   bottom: 100px;
@@ -174,6 +160,7 @@
     font-weight: bold;
     color: white;
     letter-spacing: 8px;
+    text-decoration: none;
   }
 
   .icon-wrapper {
@@ -192,10 +179,6 @@
     font-size: 20px;
     color: white;
 
-    i {
-      font-size: 1em;
-    }
-
     &:hover {
       background-color: white;
       color: $primaryColor;
@@ -204,9 +187,6 @@
   }
 }
 
-/* --------------------- */
-/* RESPONSIVE            */
-/* --------------------- */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2rem;
