@@ -15,6 +15,7 @@
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 1rem;
+  font-family: inherit;
 }
 
 .contact-form button {
@@ -25,9 +26,24 @@
   border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .contact-form button:hover {
   background-color: #A88D5A;
+  transform: translateY(-2px);
+}
+
+.form-message {
+  font-size: 1rem;
+  margin-top: 16px;
+  display: none;
+
+  &.success {
+    color: green;
+  }
+
+  &.error {
+    color: red;
+  }
 }

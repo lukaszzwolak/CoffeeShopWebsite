@@ -1,23 +1,37 @@
-import { postContact } from '../api/contact.js';
-
 export class ContactForm {
-    constructor(container) {
-        this.form = container.querySelector('.contact-form');
+    constructor(formElement) {
+        this.form = formElement;
+        this.message = this.form.querySelector('.form-message');
+        this.addSubmitHandler();
+    }
 
+    addSubmitHandler() {
         this.form.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            const data = {
-                name: this.form.querySelector('#name').value,
-                title: this.form.querySelector('#title').value,
-                message: this.form.querySelector('#message').value,
-            };
+            const name = this.form.querySelector('#name').value.trim();
+            const title = this.form.querySelector('#title').value.trim();
+            const message = this.form.querySelector('#message').value.trim();
 
-            postContact(data, () => {
-                alert('Thanks! Your message has been sent.');
-
+            if (name && title && message) {
+                this.displayMessage('✅ Message sent successfully!', 'success');
                 this.form.reset();
-            });
+            } else {
+                this.displayMessage('⚠️ Please fill in all fields.', 'error');
+            }
         });
+    }
+
+    displayMessage(text, type) {
+        this.message.textContent = text;
+        this.message.classList.remove('success', 'error');
+        this.message.classList.add(type);
+        this.message.style.display = 'block';
+
+        clearTimeout(this.timeout);
+        this.timeout = setTimeout(() => {
+            this.message.style.display = 'none';
+            this.message.classList.remove('success', 'error');
+        }, 4000);
     }
 }
