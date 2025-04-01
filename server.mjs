@@ -9,7 +9,9 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use('/api', jsonServer.defaults(), jsonServer.router(path.join(__dirname, 'src/db/app.json')));
+const apiRouter = jsonServer.router(path.join(__dirname, 'src/db/app.json'));
+const middlewares = jsonServer.defaults();
+app.use('/api', middlewares, apiRouter);
 
 app.use(express.static(path.join(__dirname, 'dist')));
 
