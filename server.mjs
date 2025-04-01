@@ -9,11 +9,9 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use('/api', jsonServer.defaults(), jsonServer.router(path.join(__dirname, 'src/db/app.json')));
 
-const apiRouter = jsonServer.router(path.join(__dirname, 'src/db/app.json'));
-const middlewares = jsonServer.defaults();
-app.use('/api', middlewares, apiRouter);
+app.use(express.static(path.join(__dirname, 'dist')));
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
@@ -22,11 +20,6 @@ app.get('*', (req, res) => {
 app.listen(PORT, () => {
     console.log(`✅ Serwer działa na porcie ${PORT}`);
 });
-
-
-
-
-
 
 
 // import express from 'express';
