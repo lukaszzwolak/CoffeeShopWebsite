@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, 'dist')));
 
-const apiRouter = jsonServer.router(path.join(__dirname, 'dist/db/app.json'));
+const apiRouter = jsonServer.router(path.join(__dirname, 'src/db/app.json'));
 const middlewares = jsonServer.defaults();
 app.use('/api', middlewares, apiRouter);
 
