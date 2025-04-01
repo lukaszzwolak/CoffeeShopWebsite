@@ -2,7 +2,12 @@ import { API_URL } from "./settings.js";
 
 export const getProducts = (callback) => {
     fetch(API_URL + '/products')
-        .then((res) => res.json())
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error(`HTTP error! status: ${res.status}`);
+            }
+            return res.json();
+        })
         .then((products) => callback(products))
         .catch((err) => console.error('Error fetching products:', err));
 };
