@@ -1,3 +1,3 @@
-Strona internetowa dla wenezuelskiej palarni kawy to prosta witryna typu SPA z trzema podstronami: Home, Products i Contact. Produkty pobierane są z lokalnego API, a strona jest responsywna, szybka i semantyczna. Dodano losowy nagłówek, dynamiczne ceny przy produktach oraz automatyczną karuzelę w sekcji "About Us".
+The website for the Venezuelan coffee roastery is a simple SPA-type site with three subpages: Home, Products, and Contact. Products are fetched from a local API, and the site is responsive, fast, and semantic. A random header, dynamic prices for products, and an automatic carousel in the "About Us" section have been added.
 
 link do strony: https://ccdceea6-db35-4ae4-8ef5-916f9a5f9b57-00-23qghhdwo80m.riker.replit.dev/
