@@ -6,17 +6,6 @@ A modern and responsive website for a coffee shop, built using HTML, CSS, and Ja
 
 The live demo link is currently unavailable. However, you can easily run the project locally on your device.
 
-📁 Project Structure
-CoffeeShopWebsite/
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
-├── img/
-│   └── ...
-├── index.html
-└── README.md
-
 ⚙️ How to Run Locally
 	1.	Clone the repository from GitHub.
 	2.	Open the project folder.
